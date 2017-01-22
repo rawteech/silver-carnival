@@ -3,7 +3,13 @@
 	<title>Post List</title>
 </head>
 <body>
-	<h4>Confirmation</h4>
-	<p>Hey there</p>
+	<h2>Testing out Template engine</h2>
+	{% for post in posts %}
+		<div>
+			<p>published: {{ post.published_date }}</p>
+			<h3><a href="">{{ post.title }}</a></h3>
+			<p>{{ post.text | linebreaksbr }}</p>
+		</div>
+	{% endfor %}
 </body>
 </html>
